@@ -57,9 +57,9 @@ public class MethodPage extends PageBase {
 		
 		faceGiris.click(); Thread.sleep(1000);
 		
-		faceMail.sendKeys("m.said04@hotmail.com");
+		faceMail.sendKeys("mail_giriniz");
 		
-		faceSifre.sendKeys("Said201162-");
+		faceSifre.sendKeys("şifre-giriniz");
 		js.drawBorder(faceSifre, driver);
 		faceSifre.sendKeys(Keys.ENTER); Thread.sleep(1000);
 		
