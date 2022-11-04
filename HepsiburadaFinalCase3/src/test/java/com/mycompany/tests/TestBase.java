@@ -60,8 +60,8 @@ public class TestBase {
 	@BeforeTest
 	public void setExtent() {
 		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentReport.html", true);
-		extent.addSystemInfo("Host Name", "Veterans united");
-		extent.addSystemInfo("Team", "Long Horns");
+		extent.addSystemInfo("Host Name", "Lenovo");
+		extent.addSystemInfo("Team", "QA Team");
 		extent.addSystemInfo("Environment", "QA");
 
 	}
