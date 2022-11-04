@@ -27,60 +27,7 @@ public class PageBase {
 	
 	
 //	PAGE FACTORY ===================       lOGIN LOCATORS	
-		
-	
-	@FindBy(id="username")
-	WebElement userName;
-	
-	@FindBy(id="password")
-	WebElement passWord;
-	
-	@FindBy(css="label[class*=woocommerce-form] input[name=rememberme]")
-	WebElement rememberMe;
-	
-	@FindBy(css="input[name=login]")
-	WebElement loginButton;
-	
-//  findElements icin kullanilir:
-	@FindBy(css="input[name=login]")
-	List<WebElement> loginNames;
-
-	@FindBy(linkText = "MY ACCOUNT")
-	WebElement myAccount;
-	
-	
-	@FindBy(linkText = "WEBTABLE")
-	WebElement webTable;
-	
-	@FindBy(linkText = "CHECKOUT")
-	WebElement checkOut;
-	
-	
-	
-// ==========================================================================================================	
-	
-		//Home Menu
-		@FindBy(xpath="//*[@id='primary-header-home']")  //a[contains(text(),'My account')]
-		WebElement homeButton;
-		
-		//Flight Button
-		@FindBy(xpath="//*[@id='tab-flight-tab-hp']")
-		WebElement flightButton;
-		
-		
-		//OneWay Button
-		@FindBy(xpath="//*[@id='flight-type-one-way-label-hp-flight']")
-		WebElement oneWayButton;
-		
-		//OriginCity Button
-		@FindBy(xpath="//*[@id='flight-origin-hp-flight']")
-		WebElement originCity;
-		
-						
-		@FindBy(xpath="//*[@id='typeaheadDataPlain']/div/li")
-		List<WebElement> originList;
-		
-		
+			
 // =============================Hepsiburada========================================================================	
 		
 		@FindBy(id="onetrust-accept-btn-handler")
@@ -98,9 +45,6 @@ public class PageBase {
 		@FindBy(xpath="//input[@id='email']")
 		WebElement faceMail;
 		
-		//@FindBy(id="email")
-		//WebElement faceMail;
-		
 		@FindBy(id="pass")
 		WebElement faceSifre;
 		
@@ -108,6 +52,9 @@ public class PageBase {
 		@FindBy(xpath="//a[@title='Hepsiburada']//*[name()='svg']")
 		WebElement logoElementi;
 		
+		//span[@class='sf-OldMyAccount-sS_G2sunmDtZl9Tld5PR'][1]
+		@FindBy(xpath="//a[@title='Hepsiburada']//*[name()='svg']")
+		WebElement üyeAdi;
 		
 		@FindBy(xpath="//input[@class='desktopOldAutosuggestTheme-UyU36RyhCTcuRs_sXL9b'][1]")
 		WebElement urunArama;
@@ -135,6 +82,14 @@ public class PageBase {
 		
 		@FindBy(xpath = "//a[contains(text(),'beşiroğlu since 1980')]")
 		WebElement urun2;
+		
+// =============================Hepsiburada2========================================================================	
+		
+		@FindBy(xpath="//h3[@type='cozy'][contains(text(),'Diba 6 Adet Lambswool Yün Kışlık Kadın Soket Çorap')][1]")
+		WebElement yunCorap;
 	
-	
+		@FindBy(xpath = "//a[contains(text(),'arslan çorap çamaşır')]")
+		WebElement satici1;
+		@FindBy(xpath = "//a[normalize-space()='gnc shop']")
+		WebElement satici2;
 }
