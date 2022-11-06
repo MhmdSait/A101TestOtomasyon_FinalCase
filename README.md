@@ -31,7 +31,7 @@ Mesela browser tanımlamaları ile ilgili kodlar, javascript ile ilgili kodlar, 
 ![Inkedlog](https://user-images.githubusercontent.com/108357127/200192278-b179069f-9320-41dc-b321-f448da574072.jpg)
 ---
 ![Ekran Görüntüsü (729)](https://user-images.githubusercontent.com/108357127/200192404-2ede1784-8666-4760-ae41-064ca497ef91.png)
-- Ayrıca *test-output* klasörünün altında *ExtentReport.html*'e tıklayınca tarayıcıdan yukarıdaki gibi bir 'ExtentReports' alıyorsunuz. İçinde yapılan testlerin geçip geçmediğini, yüzdelik oranlarını, tarih-saat bilgilerini ve ekran görüntüelrini inceleyebilirsiniz.
+- Ayrıca *test-output* klasörünün altında *ExtentReport.html*'e tıklayınca tarayıcıdan yukarıdaki gibi bir 'ExtentReports' alıyorsunuz. İçinde yapılan testlerin geçip geçmediğini, yüzdelik oranlarını, tarih-saat bilgilerini ve ekran görüntülerini inceleyebilirsiniz.
 
 
 📚 İstenilen Final Test Case' nin İçeriği
