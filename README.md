@@ -28,13 +28,18 @@ Mesela browser tanımlamaları ile ilgili kodlar, javascript ile ilgili kodlar, 
 -	**testBase class** ı açıyoruz. Bunun içerisine test öncesi, test sırası ve test sonrası yapılacak şeyleri yazıyoruz. Yani testin izleyeceği adımları yazıyoruz. (TestConfigProperties i burada path olarak verip oradan url, browser filan alıyoruz.)
 -	**callTest class** ı açıyoruz. Burada testleri test annotationu (@test) ile çağırıyoruz. Metod sayfasında metoda ne isim verdiysek burada testi o isim ile çağırıyoruz. Ayrıca testin sonucuna assertion ekliyoruz test başarılı veya değil diye. Bu sayfada testlerimize priority verebiliyoruz 1, 2, 3 şeklinde.
 ---
+![Inkedlog](https://user-images.githubusercontent.com/108357127/200192278-b179069f-9320-41dc-b321-f448da574072.jpg)
+---
+![Ekran Görüntüsü (729)](https://user-images.githubusercontent.com/108357127/200192404-2ede1784-8666-4760-ae41-064ca497ef91.png)
+- Ayrıca *test-output* klasörünün altında *ExtentReport.html*'e tıklayınca tarayıcıdan yukarıdaki gibi bir 'ExtentReports' alıyorsunuz. İçinde yapılan testlerin geçip geçmediğini, yüzdelik oranlarını, tarih-saat bilgilerini ve ekran görüntüelrini inceleyebilirsiniz.
+
 
 📚 İstenilen Final Test Case' nin İçeriği
 
 ### Kullanılacak Teknolojiler: Selenium
 ### Konu: Hepsiburada.com üzerinden sepete ürün eklenmesi 
 
-Tets1. Kullanıcı girişi yapılarak sepete ürün eklenmesi
+Tets 1. Kullanıcı girişi yapılarak sepete ürün eklenmesi
 - Kullanıcı Hepsiburada.com sitesini ziyaret eder.
 - Kullanıcı giriş işlemi yapılır.
 - Yönlendirmeden sonra anasayfada kullanıcı giriş işleminin yapıldığı doğrulanır
@@ -43,7 +48,7 @@ Tets1. Kullanıcı girişi yapılarak sepete ürün eklenmesi
 - Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.
 - Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanmalıdır.
 
-Test2. Kullanıcı girişi yapılmadan belirtilen ürünü sepete ekleme
+Test 2. Kullanıcı girişi yapılmadan belirtilen ürünü sepete ekleme
 - Kullanıcı Hepsiburada.com sitesini ziyaret eder.
 - Kullanıcı, Arama sonucunda ekrana gelen ürün listesinden (veya tek bir sonuç da dönmüş olabilir) ürün seçer.
 - Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.
