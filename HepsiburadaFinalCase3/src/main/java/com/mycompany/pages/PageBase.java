@@ -1,7 +1,5 @@
 package com.mycompany.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,7 +24,7 @@ public class PageBase {
 	}
 	
 	
-//	PAGE FACTORY ===================       lOGIN LOCATORS	
+//	PAGE FACTORY ===================    lOGIN LOCATORS	
 			
 // =============================Hepsiburada========================================================================	
 		
@@ -93,3 +91,4 @@ public class PageBase {
 		@FindBy(xpath = "//a[normalize-space()='gnc shop']")
 		WebElement satici2;
 }
+
