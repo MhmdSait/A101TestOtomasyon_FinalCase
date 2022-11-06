@@ -4,13 +4,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -20,11 +20,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-
 import com.mycompany.pages.HomePage;
 import com.mycompany.util.Browser;
-import com.mycompany.util.ExcelReader;
 import com.mycompany.util.JSEHelper;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -33,6 +30,7 @@ import com.relevantcodes.extentreports.LogStatus;
 public class TestBase {
 
 	protected WebDriver driver;
+	Logger logger = Logger.getLogger(TestBase.class);
 
 	protected static Properties testConfig;
 	public ExtentReports extent;
@@ -54,11 +52,13 @@ public class TestBase {
 		// loginPage.loginHome(testConfig.getProperty("username"),
 		// testConfig.getProperty("password"));
 		System.out.println(homePage.getTitle());
+		logger.info("Hepsiburada sitesine gidildi.");
 
 	}
 
 	@BeforeTest
 	public void setExtent() {
+		logger.info("Test baslatildi.");
 		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentReport.html", true);
 		extent.addSystemInfo("Host Name", "Lenovo");
 		extent.addSystemInfo("Team", "QA Team");
@@ -70,6 +70,7 @@ public class TestBase {
 	public void endReport() {
 		extent.flush();
 		extent.close();
+		logger.info("Test tamamlandi.");
 	}
 
 	public static String getScreenshotForFail(WebDriver driver, String screenshotName) throws IOException {
@@ -103,14 +104,6 @@ public class TestBase {
 	 * testConfig.getProperty("password")); }
 	 */
 
-	@DataProvider
-	public Object[][] dataProvider(Method method) {
-		ExcelReader ddh = new ExcelReader(testConfig.getProperty("mastertestdatafile"));
-
-		Object[][] testData = ddh.getTestCaseDataSets(testConfig.getProperty("testdatasheet"), method.getName());
-
-		return testData;
-	}
 
 	@AfterMethod
 	public void tearDown(ITestResult result) throws IOException, InterruptedException {
@@ -137,5 +130,6 @@ public class TestBase {
 
 		extent.endTest(extentTest); // ending test and ends the current test and prepare to create html report
 		Browser.quitDriver(driver);
+		
 	}
 }
