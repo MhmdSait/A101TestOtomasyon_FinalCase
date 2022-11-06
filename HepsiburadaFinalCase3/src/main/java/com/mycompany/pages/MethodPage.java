@@ -26,8 +26,8 @@ public class MethodPage extends PageBase {
 		js.drawBorder(giris2, driver);
 		giris2.click(); Thread.sleep(1000);
 		faceGiris.click(); Thread.sleep(1000);
-		faceMail.sendKeys("mailgiriniz");
-		faceSifre.sendKeys("şifre");
+		faceMail.sendKeys("m.said04@hotmail.com");
+		faceSifre.sendKeys("Said201162-");
 		js.drawBorder(faceSifre, driver);
 		faceSifre.sendKeys(Keys.ENTER); Thread.sleep(1000);
 		
@@ -37,8 +37,7 @@ public class MethodPage extends PageBase {
 		urunArama.sendKeys("çorap");
 		urunArama.sendKeys(Keys.ENTER); Thread.sleep(1000);
 		
-		js.scrollIntoView(corap, driver); js.drawBorder(corap, driver);
-		//js.clickElementByJS(corap, driver); 
+		js.scrollIntoView(corap, driver); js.drawBorder(corap, driver); 
 		System.out.println("sayfa başligi: " + js.getTitleByJS(driver)); 
 		corap.click(); Thread.sleep(1000);
 		
@@ -52,19 +51,17 @@ public class MethodPage extends PageBase {
 			
 		sepetEkle.click(); js.drawBorder(sepetEkle, driver); Thread.sleep(1000);
 		js.scrollIntoView(sepetEkle, driver); Thread.sleep(1000);
-		//sepetEkle.getSize(); sepetEkle.getTagName(); sepetEkle.getText();
 		
 		ikinciUrun.click(); js.drawBorder(ikinciUrun, driver); Thread.sleep(1000);
 		
-		js.scrollIntoView(sayfaBasi, driver); js.drawBorder(sayfaBasi, driver);Thread.sleep(1000);
-		js.refreshBrowserByJS(driver); Thread.sleep(2000);
+		js.scrollIntoView(sayfaBasi, driver); js.drawBorder(sayfaBasi, driver); Thread.sleep(1000);
+		js.refreshBrowserByJS(driver); Thread.sleep(1000);
 		
 		sepetim.click(); Thread.sleep(1000);
 		
 		Assert.assertTrue(urun1.isDisplayed()); js.drawBorder(urun1, driver);
 		Assert.assertTrue(urun2.isDisplayed()); js.drawBorder(urun2, driver);
 		
-		//Assertions.isTrueArgument(getTitle(), true);
 				
 		return new MethodPage(driver);
 		
@@ -80,7 +77,6 @@ public class MethodPage extends PageBase {
 		urunArama.sendKeys(Keys.ENTER); Thread.sleep(1000);
 		
 		js.scrollIntoView(yunCorap, driver); js.drawBorder(yunCorap, driver);
-		System.out.println("sayfa başligi: " + js.getTitleByJS(driver));
 		yunCorap.click(); Thread.sleep(1000);
 		
 		String parentWindow= driver.getWindowHandle();
@@ -91,11 +87,11 @@ public class MethodPage extends PageBase {
 				driver.switchTo().window(curWindow);
 			}
 		sepetEkle.click(); js.drawBorder(sepetEkle, driver); Thread.sleep(1000);
-		js.scrollIntoView(sepetEkle, driver); Thread.sleep(1000);	
+		js.scrollIntoView(sepetEkle, driver); Thread.sleep(2000);
 			
 		ikinciUrun.click(); js.drawBorder(ikinciUrun, driver); Thread.sleep(1000);
 		
-		js.scrollIntoView(sayfaBasi, driver); js.drawBorder(sayfaBasi, driver);Thread.sleep(1000);
+		js.scrollIntoView(sayfaBasi, driver); js.drawBorder(sayfaBasi, driver); Thread.sleep(1000);
 		js.refreshBrowserByJS(driver); Thread.sleep(2000);
 		
 		sepetim.click(); Thread.sleep(1000);
@@ -108,7 +104,4 @@ public class MethodPage extends PageBase {
 	}
 	
 	
- 	}
-	
-
-	
+ }
